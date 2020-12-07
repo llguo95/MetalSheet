@@ -38,7 +38,7 @@ htxtpath = "{}/hvalue.txt".format(folder_path)
 outputpath = "{}/Displacement_of_tip.txt".format(folder_path)
 
 # Command line to run ABAQUS; provide your own file name
-cmdl = "cd {}/ && abaqus cae noGUI=ABAQUS_GPYOPT_Test_Problem.py".format(folder_path)
+cmdl = "cd {}/ && abaqus cae noGUI=ABAQUS_metalsheet_new.py".format(folder_path)
 
 def tipdisplacement(x):  # Function to optimize; x = (radius, height)
     open(Rtxtpath, "w").write(str(x[0]))
@@ -46,7 +46,7 @@ def tipdisplacement(x):  # Function to optimize; x = (radius, height)
     os.system(cmdl)
     return float(open(outputpath, "r").read().strip())
 
-print(tipdisplacement([0.15, 0.2]))
+print(tipdisplacement([0.1, 0.1]))
 
 # # --- CHOOSE the objective
 # objective = GPyOpt.core.task.SingleObjective(tipdisplacement)

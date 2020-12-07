@@ -18,8 +18,8 @@ folder_path = os.getcwd()
 Rtxtpath = "{}/Rvalue.txt".format(folder_path)
 htxtpath = "{}/hvalue.txt".format(folder_path)
 
-R=float(open(Rtxtpath, "r").read().strip())
-h=float(open(htxtpath, "r").read().strip())
+R=0.15
+h=0.2
 # 0.1<h<0.3
 # 0.1<R<0.2
 # pi*R*R+0.8*h>0.25
